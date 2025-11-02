@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Profile - Campus Connect</title>
+  <link rel="stylesheet" href="myprofile.css">
+  <style>
+
+    :root{
+      --brand:#E87A64;
+      --dark:#132541;
+      --muted:#6b7280;
+    }
+
+    .profile-container{
+      max-width:960px;
+      margin:110px auto 48px;
+      padding:0 20px;
+    }
+
+    .profile-header{
+      background:var(--dark);
+      padding:28px;
+      border-radius:12px;
+      color:#fff;
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+
+    .profile-avatar{
+      width:120px;
+      height:120px;
+      border-radius:12px;
+      background:var(--brand);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      color:#fff;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+
+    .profile-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .profile-name h1{
+      margin:0;
+      font-size:24px;
+    }
+
+    .profile-name p{
+      margin:6px 0 0;
+      opacity:.9;
+    }
+
+    .profile-card{
+      background:#fff;
+      border-radius:12px;
+      padding:26px;
+      margin-top:22px;
+      box-shadow:0 4px 12px rgba(0,0,0,.06);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .form-group{
+      margin-bottom:14px;
+    }
+
+    .form-group label{
+      display:block;
+      margin-bottom:6px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      width:100%;
+      padding:10px;
+      border:1px solid #e6e9ee;
+      border-radius:8px;
+      font-size:15px;
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    .actions-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:10px;
+    }
+
+    .btn{padding:10px 14px;
+      border-radius:8px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .btn-primary{
+      background:var(--brand);
+      color:#fff;
+    }
+
+    .btn-muted{
+      background:#f3f4f6;
+      color:#111;
+    }
+
+    .field-note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    @media(max-width:720px){
+      .form-grid{
+        grid-template-columns:1fr
+      }
+
+      .profile-header{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .profile-avatar{
+        width:96px;
+        height:96px;
+        font-size:34px;
+      }
+      
+
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="left">
+      <div class="logo">
+        <img src="homepage.png">
+        <div>Campus Conect</div>
+      </div>
+
+    </div>
+    <div class="middle">
+      <div class="links">
+        <div>
+          <a href="homepage.html">Home</a>
+        </div>
+        <div>
+          <a href="hostels.html">Hostels</a>
+        </div><div>
+          <a href="apartments.html">Apartments</a>
+        </div><div>
+          <a href="houses.html">Houses</a>
+        </div><div>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="right">
+     
+    <div class="dropdown">
+      <img src="typeshit1.png" id="menuButton" alt="Menu" />
+      <div id="dropdownMenu" class="dropdown-content">
+        
+      </div>
+    </div>
+  </div>
+
+      
+
+    </div>
+
+</header>
+
+  <main class="profile-container">
+    <section class="profile-header">
+      <div class="profile-avatar" id="avatarBox" title="Profile">
+        <!-- initials or existing image (no upload controls) -->
+      </div>
+
+      <div class="profile-name">
+        <h1 id="profileFullName">Full Name</h1>
+        <p id="profileEmail">email@example.com</p>
+        <!-- upload controls removed as requested -->
+      </div>
+    </section>
+
+    <section class="profile-card" aria-labelledby="personal-info-heading">
+      <h2 id="personal-info-heading">Personal Information</h2>
+
+      <form id="profileForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (cannot change)</label>
+            <input id="email" name="email" type="email" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="date">
+          </div>
+
+          <div class="form-group">
+            <label for="occupation">Occupation</label>
+            <select id="occupation" name="occupation">
+              <option value="">Select</option>
+              <option value="student">Student</option>
+              <option value="employed">Employed</option>
+              <option value="self-employed">Self-employed</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input id="studentId" name="studentId">
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">Prefer not to say</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" name="address">
+          </div>
+
+          <div class="form-group" style="grid-column:1 / -1">
+            <label for="bio">Short bio</label>
+            <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..."></textarea>
+            <div class="field-note">This information will be visible to property owners when you make enquiries.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Website / Portfolio</label>
+            <input id="website" name="website" placeholder="https://">
+          </div>
+
+          <div class="form-group">
+            <label for="emergency">Emergency contact</label>
+            <input id="emergency" name="emergency" placeholder="Name & phone">
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button id="logoutBtn" type="button" class="btn btn-muted">Log out</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script>
+    // header dropdown toggle (simple)
+    document.addEventListener('click', function (e) {
+      const menu = document.getElementById('dropdownMenu');
+      const btn = document.getElementById('menuButton');
+      if (!btn || !menu) return;
+      if (e.target === btn) { menu.style.display = menu.style.display === 'block' ? 'none' : 'block'; return; }
+      if (!menu.contains(e.target) && e.target !== btn) menu.style.display = 'none';
+    });
+
+    (function () {
+      const user = getCurrentUser();
+      if (!user) return window.location.href = 'login.html';
+
+      function saveUser(updated) {
+        const all = JSON.parse(localStorage.getItem('users') || '[]');
+        const idx = all.findIndex(u => u.email === updated.email);
+        if (idx >= 0) all[idx] = updated;
+        else all.push(updated);
+        localStorage.setItem('users', JSON.stringify(all));
+        localStorage.setItem('currentUser', JSON.stringify(updated));
+      }
+
+      const avatarBox = document.getElementById('avatarBox');
+      const fullNameEl = document.getElementById('profileFullName');
+      const emailEl = document.getElementById('profileEmail');
+      const fullNameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const dobInput = document.getElementById('dob');
+      const occupationInput = document.getElementById('occupation');
+      const studentIdInput = document.getElementById('studentId');
+      const genderInput = document.getElementById('gender');
+      const addressInput = document.getElementById('address');
+      const bioInput = document.getElementById('bio');
+      const websiteInput = document.getElementById('website');
+      const emergencyInput = document.getElementById('emergency');
+
+      // populate fields
+      function renderAvatar(imgData) {
+        avatarBox.innerHTML = '';
+        if (imgData) {
+          const img = document.createElement('img');
+          img.src = imgData;
+          avatarBox.appendChild(img);
+        } else {
+          const initials = (user.fullName || user.email || '').split(' ').map(n => n[0]||'').join('').toUpperCase().slice(0,3) || 'U';
+          avatarBox.textContent = initials;
+        }
+      }
+
+      fullNameEl.textContent = user.fullName || user.email;
+      emailEl.textContent = user.email;
+      fullNameInput.value = user.fullName || '';
+      emailInput.value = user.email || '';
+      phoneInput.value = user.phone || '';
+      dobInput.value = user.dob || '';
+      occupationInput.value = user.occupation || '';
+      studentIdInput.value = user.studentId || '';
+      genderInput.value = user.gender || '';
+      addressInput.value = user.address || '';
+      bioInput.value = user.bio || '';
+      websiteInput.value = user.website || '';
+      emergencyInput.value = user.emergency || '';
+
+      // show existing profile image if any (no upload/remove controls)
+      const savedImg = user.profileImage || localStorage.getItem('profileImage:' + user.email) || null;
+      renderAvatar(savedImg);
+
+      // save form
+      document.getElementById('profileForm').addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        const updated = Object.assign({}, user, {
+          fullName: fullNameInput.value.trim(),
+          phone: phoneInput.value.trim(),
+          dob: dobInput.value || '',
+          occupation: occupationInput.value || '',
+          studentId: studentIdInput.value.trim(),
+          gender: genderInput.value || '',
+          address: addressInput.value.trim(),
+          bio: bioInput.value.trim(),
+          website: websiteInput.value.trim(),
+          emergency: emergencyInput.value.trim()
+        });
+        saveUser(updated);
+        fullNameEl.textContent = updated.fullName || updated.email;
+        alert('Profile saved');
+      });
+
+      // logout
+      document.getElementById('logoutBtn').addEventListener('click', function () {
+        if (typeof logoutUser === 'function') logoutUser();
+        else localStorage.removeItem('currentUser');
+        window.location.href = 'login.html';
+      });
+    })();
+  </script>
+
+  <script>
+    // Get elements
+    const menuButton = document.getElementById('menuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+  
+    // Toggle dropdown when image is clicked
+    menuButton.addEventListener('click', function (event) {
+      dropdownMenu.classList.toggle('show');
+    });
+  
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('#menuButton')) {
+        if (dropdownMenu.classList.contains('show')) {
+          dropdownMenu.classList.remove('show');
+        }
+      }
+    });
+  </script>
+  
+  <!-- Inject/restore .middle links into dropdown on small screens -->
+  <script>
+  (function () {
+    const middle = document.querySelector('.middle');
+    const dropdown = document.getElementById('dropdownMenu');
+    if (!middle || !dropdown) return;
+    const linksContainer = middle.querySelector('.links');
+  
+    function isMiddleHidden() {
+      return window.getComputedStyle(middle).display === 'none';
+    }
+  
+    function createInjectedWrapper() {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'injected-links';
+      // basic styling so items look like dropdown items
+      wrapper.style.display = 'flex';
+      wrapper.style.flexDirection = 'column';
+      wrapper.style.padding = '6px 0';
+      wrapper.style.gap = '2px';
+      return wrapper;
+    }
+  
+    function injectLinksIntoDropdown() {
+      if (dropdown.querySelector('.injected-links')) return; // already injected
+      const wrapper = createInjectedWrapper();
+      // clone each anchor so original stays in place
+      linksContainer.querySelectorAll('a').forEach(a => {
+        const cloned = a.cloneNode(true);
+        cloned.style.padding = '10px 16px';
+        cloned.style.color = '#132541';
+        cloned.style.textDecoration = 'none';
+        cloned.style.display = 'block';
+        // ensure clicking closes dropdown on navigation
+        cloned.addEventListener('click', () => dropdown.classList.remove('show'));
+        wrapper.appendChild(cloned);
+      });
+      // insert at top of dropdown
+      dropdown.insertBefore(wrapper, dropdown.firstChild);
+    }
+  
+    function removeInjectedLinks() {
+      const injected = dropdown.querySelector('.injected-links');
+      if (injected) injected.remove();
+    }
+  
+    function syncNav() {
+      if (isMiddleHidden()) injectLinksIntoDropdown();
+      else removeInjectedLinks();
+    }
+  
+    // run on load and resize
+    window.addEventListener('resize', syncNav);
+    document.addEventListener('DOMContentLoaded', syncNav);
+    // also run once now (in case DOMContentLoaded already fired)
+    syncNav();
+  })();
+  </script>
+ 
+
+  <script src="session.js"></script>
+</body>
+</html>

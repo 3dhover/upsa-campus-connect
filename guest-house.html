@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="guest-house.css">
+  <link rel="stylesheet" href="generalbooking.css">
+</head>
+<body>
+<header class="header">
+    <div class="left">
+      <div class="logo">
+        <img src="homepage.png">
+        <div>Campus Conect</div>
+      </div>
+
+    </div>
+    <div class="middle">
+      <div class="links">
+        <div>
+          <a href="homepage.html">Home</a>
+        </div>
+        <div>
+          <a href="hostels.html">Hostels</a>
+        </div><div>
+          <a href="apartments.html">Apartments</a>
+        </div><div>
+          <a href="houses.html">Houses</a>
+        </div><div>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="right">
+      <!-- Replace the existing search div in the header -->
+<div class="search-wrapper">
+  <form id="searchForm" class="search3" role="search" onsubmit="return handleSearch(event)">
+    <input 
+      type="search" 
+      id="searchInput" 
+      placeholder="Search listings..." 
+      aria-label="Search listings"
+    >
+    <button type="submit" class="search-btn">
+      <img src="search.png" alt="Search" class="searchimg">
+    </button>
+  </form>
+</div>
+    <div class="dropdown">
+      <img src="typeshit1.png" id="menuButton" alt="Menu" />
+      <div id="dropdownMenu" class="dropdown-content">
+        
+      </div>
+    </div>
+  </div>
+
+      
+
+    </div>
+
+</header>
+
+<nav class="sidebar">
+  <a href="hostels.html">
+    <div class="sidebar-link">
+        <img src="slide2.webp">
+        <div>Hostels</div>
+   
+    </div>
+  </a>
+  <a href="apartments.html">
+    <div class="sidebar-link">
+        <img src="slide3.jpg">
+        <div>Apartments</div>
+    </div>
+  </a>
+  <a href="houses.html">
+    <div class="sidebar-link">
+        <img src="danfa-site.jpg">
+        <div>Houses</div>
+    </div>
+  </a>
+  <a href="guest-house.html">
+    <div class="sidebar-link">
+        <img src="399389177.jpg">
+        <div>Guest houses</div>
+    </div>
+  </a>
+  <a href="hotel.html">
+    <div class="sidebar-link">
+        <img src="slide1.jpg">
+        <div>Hotels</div>
+    </div>
+  </a>
+    
+
+</nav>
+
+
+<main>
+
+   
+    
+ 
+  <section class="video-grid listings-compact">
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="386447018.jpg" alt="Crown Plaza Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Crown Plaza Guest House</h3>
+        <p class="listing-location">Location: UPSA Road</p>
+        <div class="listing-meta">
+          <div class="price">GHS 350 / night</div>
+          <div class="meta-right">4.8 ★ · 200m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>WiFi</span><span>Breakfast</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="2196511802_WxH.jpg" alt="Serene Haven Guest Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Serene Haven Guest Lodge</h3>
+        <p class="listing-location">Location: UPSA Main Gate</p>
+        <div class="listing-meta">
+          <div class="price">GHS 280 / night</div>
+          <div class="meta-right">4.5 ★ · 100m</div>
+        </div>
+        <div class="features">
+          <span>Fan</span><span>Hot Water</span><span>Security</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Details</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="548720868.jpg  " alt="Comfort Zone Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Comfort Zone Guest House</h3>
+        <p class="listing-location">Location: Madina Junction</p>
+        <div class="listing-meta">
+          <div class="price">GHS 300 / night</div>
+          <div class="meta-right">4.6 ★ · 150m</div>
+        </div>
+        <div class="features">
+          <span>WiFi</span><span>Fan</span><span>Laundry</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="689262994.jpg" alt="UPSA Executive Lodging">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">UPSA Executive Lodging</h3>
+        <p class="listing-location">Location: Behind UPSA Hostels</p>
+        <div class="listing-meta">
+          <div class="price">GHS 1,200 / day</div>
+          <div class="meta-right">4.7 ★ · 250m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>Private Kitchen</span><span>Parking</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Details</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="akwaaba-fie-4-NgJbYd8MzHAyovYfsWiP.jpg" alt="Green Valley Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Green Valley Guest House</h3>
+        <p class="listing-location">Location: Haatso</p>
+        <div class="listing-meta">
+          <div class="price">GHS 220 / night</div>
+          <div class="meta-right">4.3 ★ · 1.2km</div>
+        </div>
+        <div class="features">
+          <span>WiFi</span><span>Breakfast</span><span>Garden</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="pic-bio-guest-house-accra-5.jpeg" alt="Platinum Suites">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Platinum Suites</h3>
+        <p class="listing-location">Location: East Legon</p>
+        <div class="listing-meta">
+          <div class="price">GHS 1,800 / day</div>
+          <div class="meta-right">4.9 ★ · 2.0km</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>WiFi</span><span>Gym</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Notify Me</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="accra-swiss-palm-lodge-annex-photo-8.jpeg" alt="East Gate Guest Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">East Gate Guest Lodge</h3>
+        <p class="listing-location">Location: East Gate</p>
+        <div class="listing-meta">
+          <div class="price">GHS 180 / night</div>
+          <div class="meta-right">4.2 ★ · 300m</div>
+        </div>
+        <div class="features">
+          <span>Fan</span><span>Hot Water</span><span>24/7 Security</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="MG_7000-840x560.jpg" alt="Academic Haven">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Academic Haven</h3>
+        <p class="listing-location">Location: Campus Road</p>
+        <div class="listing-meta">
+          <div class="price">GHS 650 / day</div>
+          <div class="meta-right">4.5 ★ · 500m</div>
+        </div>
+        <div class="features">
+          <span>Study Desks</span><span>WiFi</span><span>Laundry</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="pic-movie-bay-guesthouse-accra-5.jpeg" alt="Scholar's Rest">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Scholar's Rest</h3>
+        <p class="listing-location">Location: Near UPSA Library</p>
+        <div class="listing-meta">
+          <div class="price">GHS 80 / day</div>
+          <div class="meta-right">4.4 ★ · 120m</div>
+        </div>
+        <div class="features">
+          <span>Shared Kitchen</span><span>WiFi</span><span>Security</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Details</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="574422396.jpg" alt="Campus View Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Campus View Guest House</h3>
+        <p class="listing-location">Location: Campus View</p>
+        <div class="listing-meta">
+          <div class="price">GHS 500 / day</div>
+          <div class="meta-right">4.6 ★ · 400m</div>
+        </div>
+        <div class="features">
+          <span>Balcony</span><span>WiFi</span><span>Housekeeping</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="536246570.jpg" alt="Royal Palms Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Royal Palms Lodge</h3>
+        <p class="listing-location">Location: Near UPSA Clinic</p>
+        <div class="listing-meta">
+          <div class="price">GHS 420 / night</div>
+          <div class="meta-right">4.8 ★ · 220m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>Breakfast</span><span>Parking</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="rooms-from-best-one-hotel.jpg" alt="Sunset Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Sunset Guest House</h3>
+        <p class="listing-location">Location: Hilltop</p>
+        <div class="listing-meta">
+          <div class="price">GHS 2,000 / day</div>
+          <div class="meta-right">4.7 ★ · 1.5km</div>
+        </div>
+        <div class="features">
+          <span>Sea View</span><span>WiFi</span><span>Breakfast</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Notify Me</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="accra-spintex-guest-home-photo-5.jpeg" alt="Cedar Heights Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Cedar Heights Lodge</h3>
+        <p class="listing-location">Location: Cedar Street</p>
+        <div class="listing-meta">
+          <div class="price">GHS 750 / day</div>
+          <div class="meta-right">4.4 ★ · 800m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>Shared Lounge</span><span>Laundry</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Details</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+            img: this.closest('.listing-card').querySelector('img').src,
+            title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+            location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+            price: this.closest('.listing-card').querySelector('.price').textContent
+          })">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="restall-guesthouse-accra-pic-12.jpeg" alt="The Paramount Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">The Paramount Guest House</h3>
+        <p class="listing-location">Location: University Square</p>
+        <div class="listing-meta">
+          <div class="price">GHS 320 / night</div>
+          <div class="meta-right">4.5 ★ · 350m</div>
+        </div>
+        <div class="features">
+          <span>WiFi</span><span>Breakfast</span><span>Security</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="ssnit-guest-house-accra-pic-24.jpeg" alt="Oakwood Guest Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Oakwood Guest Lodge</h3>
+        <p class="listing-location">Location: Oakwood</p>
+        <div class="listing-meta">
+          <div class="price">GHS 150 / night</div>
+          <div class="meta-right">4.1 ★ · 600m</div>
+        </div>
+        <div class="features">
+          <span>Fan</span><span>Hot Water</span><span>Parking</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="334887057.jpg" alt="University Square Suites">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">University Square Suites</h3>
+        <p class="listing-location">Location: University Square</p>
+        <div class="listing-meta">
+          <div class="price">GHS 1,000 / day</div>
+          <div class="meta-right">4.6 ★ · 420m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>WiFi</span><span>Kitchenette</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Details</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="pic-saint-mary-guesthouse-accra-14.jpeg" alt="Hillview Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Hillview Guest House</h3>
+        <p class="listing-location">Location: Hillview</p>
+        <div class="listing-meta">
+          <div class="price">GHS 2,400 / day</div>
+          <div class="meta-right">4.8 ★ · 1.1km</div>
+        </div>
+        <div class="features">
+          <span>Sea View</span><span>WiFi</span><span>Breakfast</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">Notify Me</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="744683064.jpg" alt="Majestic Court Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Majestic Court Lodge</h3>
+        <p class="listing-location">Location: Majestic Close</p>
+        <div class="listing-meta">
+          <div class="price">GHS 480 / day</div>
+          <div class="meta-right">4.5 ★ · 700m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>Gym</span><span>Laundry</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="934255879.webp" alt="Golden Keys Guest House">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">Golden Keys Guest House</h3>
+        <p class="listing-location">Location: Golden Street</p>
+        <div class="listing-meta">
+          <div class="price">GHS 260 / night</div>
+          <div class="meta-right">4.4 ★ · 330m</div>
+        </div>
+        <div class="features">
+          <span>WiFi</span><span>Breakfast</span><span>Security</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+  
+    <article class="listing-card">
+      <div class="listing-media">
+        <img src="filepict-1466000167.jpg" alt="The Chancellor's Lodge">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="listing-info">
+        <h3 class="listing-title">The Chancellor's Lodge</h3>
+        <p class="listing-location">Location: Chancellor Road</p>
+        <div class="listing-meta">
+          <div class="price">GHS 900 / day</div>
+          <div class="meta-right">4.7 ★ · 450m</div>
+        </div>
+        <div class="features">
+          <span>AC</span><span>Private Bath</span><span>Parking</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-small">View</button>
+          <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+        </div>
+      </div>
+    </article>
+    <!-- 3 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="1e2963f0a3ba68264878eec238cfdf5a6d1d6957.jpeg" alt="Comfort Zone Guest House">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Comfort Zone Guest House</h3>
+    <p class="listing-location">UPSA Hostel Road, Madina</p>
+    <div class="listing-meta">
+      <div class="price">GHS 250 / night</div>
+      <div class="meta-right">4.3 ★ · 350m</div>
+    </div>
+    <div class="features">
+      <span>WiFi</span><span>TV</span><span>Security</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 4 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="pic-ghana-baptist-guest-house-accra-11.jpeg" alt="UPSA Executive Lodge">
+    <span class="badge available">Available</span>
+   
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">UPSA Executive Lodge</h3>
+    <p class="listing-location">Near UPSA Backgate, East Legon</p>
+    <div class="listing-meta">
+      <div class="price">GHS 480 / night</div>
+      <div class="meta-right">4.9 ★ · 150m</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>Balcony</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 5 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="476963847.jpg" alt="Green Valley Guest House">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Green Valley Guest House</h3>
+    <p class="listing-location">Close to Madina Firestone</p>
+    <div class="listing-meta">
+      <div class="price">GHS 300 / night</div>
+      <div class="meta-right">4.6 ★ · 500m</div>
+    </div>
+    <div class="features">
+      <span>Fan</span><span>Parking</span><span>Security</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 6 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="739668809.jpg" alt="Platinum Suites">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Platinum Suites</h3>
+    <p class="listing-location">Oyarifa Road, UPSA Area</p>
+    <div class="listing-meta">
+      <div class="price">GHS 550 / night</div>
+      <div class="meta-right">5.0 ★ · 1km</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>TV</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 7 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="pilolo-guest-house-ada-foah-ghana-2.png" alt="East Gate Lodge">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">East Gate Guest Lodge</h3>
+    <p class="listing-location">UPSA East Gate Road</p>
+    <div class="listing-meta">
+      <div class="price">GHS 200 / night</div>
+      <div class="meta-right">4.1 ★ · 300m</div>
+    </div>
+    <div class="features">
+      <span>Water</span><span>Security</span><span>Shared Kitchen</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+<!-- 8 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="sunlodge-hotel-accra-pic-45.jpeg" alt="Academic Haven">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Academic Haven</h3>
+    <p class="listing-location">Near UPSA Clinic Road</p>
+    <div class="listing-meta">
+      <div class="price">GHS 220 / night</div>
+      <div class="meta-right">4.4 ★ · 450m</div>
+    </div>
+    <div class="features">
+      <span>WiFi</span><span>Laundry</span><span>Parking</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 9 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="69421421.jpg" alt="Scholar's Rest">
+    <span class="badge available">Available</span>
+    
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Scholar's Rest</h3>
+    <p class="listing-location">UPSA Junction, Madina</p>
+    <div class="listing-meta">
+      <div class="price">GHS 190 / night</div>
+      <div class="meta-right">4.0 ★ · 600m</div>
+    </div>
+    <div class="features">
+      <span>Fan</span><span>Water</span><span>Security</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 10 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="69423555.jpg" alt="Campus View Guest House">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Campus View Guest House</h3>
+    <p class="listing-location">Behind UPSA Auditorium</p>
+    <div class="listing-meta">
+      <div class="price">GHS 260 / night</div>
+      <div class="meta-right">4.7 ★ · 200m</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>TV</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 11 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="257062537.jpg" alt="Royal Palms Lodge">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Royal Palms Lodge</h3>
+    <p class="listing-location">Near Atomic Down Roundabout</p>
+    <div class="listing-meta">
+      <div class="price">GHS 390 / night</div>
+      <div class="meta-right">4.6 ★ · 1.1km</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>Parking</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 12 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="257067920.jpg" alt="Sunset Guest House">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Sunset Guest House</h3>
+    <p class="listing-location">Near UPSA Research Block</p>
+    <div class="listing-meta">
+      <div class="price">GHS 240 / night</div>
+      <div class="meta-right">4.3 ★ · 380m</div>
+    </div>
+    <div class="features">
+      <span>WiFi</span><span>TV</span><span>Fresh Water</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+<!-- 13 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="deluxe-room.jpg" alt="Cedar Heights Lodge">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Cedar Heights Lodge</h3>
+    <p class="listing-location">Madina Estate, UPSA Road</p>
+    <div class="listing-meta">
+      <div class="price">GHS 210 / night</div>
+      <div class="meta-right">4.2 ★ · 700m</div>
+    </div>
+    <div class="features">
+      <span>Fan</span><span>Water</span><span>TV</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 14 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="390893967.jpg" alt="The Paramount Guest House">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">The Paramount Guest House</h3>
+    <p class="listing-location">Legon Boundary, UPSA Area</p>
+    <div class="listing-meta">
+      <div class="price">GHS 420 / night</div>
+      <div class="meta-right">4.8 ★ · 900m</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>Breakfast</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 15 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="399389177.jpg" alt="Oakwood Guest Lodge">
+    <span class="badge available">Available</span>
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Oakwood Guest Lodge</h3>
+    <p class="listing-location">Close to UPSA Hostel Annex</p>
+    <div class="listing-meta">
+      <div class="price">GHS 230 / night</div>
+      <div class="meta-right">4.1 ★ · 500m</div>
+    </div>
+    <div class="features">
+      <span>Fan</span><span>WiFi</span><span>Security</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 16 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="pilolo_room.jpg" alt="University Square Suites">
+    <span class="badge available">Available</span>
+    
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">University Square Suites</h3>
+    <p class="listing-location">UPSA Link Road</p>
+    <div class="listing-meta">
+      <div class="price">GHS 600 / night</div>
+      <div class="meta-right">4.9 ★ · 300m</div>
+    </div>
+    <div class="features">
+      <span>AC</span><span>WiFi</span><span>Private Washroom</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">Details</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+<!-- 17 -->
+<article class="listing-card">
+  <div class="listing-media">
+    <img src="a5c48416.avif" alt="Hillview Guest House">
+    <span class="badge available">Available</span>
+
+  </div>
+  <div class="listing-info">
+    <h3 class="listing-title">Hillview Guest House</h3>
+    <p class="listing-location">Behind UPSA Hostel Road</p>
+    <div class="listing-meta">
+      <div class="price">GHS 260 / night</div>
+      <div class="meta-right">4.5 ★ · 750m</div>
+    </div>
+    <div class="features">
+      <span>WiFi</span><span>Parking</span><span>Security</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-small">View</button>
+      <button class="btn btn-primary btn-small" onclick="handleBooking({
+  img: this.closest('.listing-card').querySelector('img').src,
+  title: this.closest('.listing-card').querySelector('.listing-title').textContent,
+  location: this.closest('.listing-card').querySelector('.listing-location').textContent,
+  price: this.closest('.listing-card').querySelector('.price').textContent
+})">Book</button>
+    </div>
+  </div>
+</article>
+
+  </section>
+  
+  
+
+
+
+
+<footer style="background-color:#132541; color:white; padding:40px 20px; font-family:Arial, sans-serif; margin-top: 30px;">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; max-width:1200px; margin:auto;">
+      
+      <!-- Brand -->
+      <div>
+          <h2 style="color:#E87A64;">Connect Campus</h2>
+          <p>Your trusted platform for renting hostels and homes with ease.</p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+          <h3 style="color:#E87A64;">Quick Links</h3>
+          <ul style="list-style:none; padding:0;">
+              <li><a href="homepage.html" style="color:white; text-decoration:none;">Home</a></li>
+              <li><a href="about.html" style="color:white; text-decoration:none;">About Us</a></li>
+              <li><a href="hostels.html" style="color:white; text-decoration:none;">Book</a></li>
+              <li><a href="hostels.html" style="color:white; text-decoration:none;">Hostels</a></li>
+              <li><a href="apartments.html" style="color:white; text-decoration:none;">Apartments</a></li>
+          </ul>
+      </div>
+
+      <!-- Book -->
+      <div>
+          <h3 style="color:#E87A64;">Book Us</h3>
+          <p><i class="fas fa-phone"></i> +233 59 895 1474</p>
+          <p><i class="fas fa-envelope"></i> rolandomicah@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> East Legon, Ghana</p>
+      </div>
+
+      <!-- Follow -->
+      <div>
+          <h3 style="color:#E87A64;">Follow Us</h3>
+          <p>
+              <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-facebook"></i></a>
+              <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-instagram"></i></a>
+              <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-whatsapp"></i></a>
+          </p>
+          <h3 style="color:#E87A64;">Networks</h3>
+          <p>
+              <i class="fas fa-sim-card"></i> MTN <br>
+              <i class="fas fa-sim-card"></i> Vodafone <br>
+              <i class="fas fa-sim-card"></i> AirtelTigo
+          </p>
+      </div>
+  </div>
+
+  <hr style="border:1px solid #E87A64; margin:20px 0;">
+  <p style="text-align:center;">&copy; 2025 Connect Campus. All Rights Bookd.</p>
+</footer>
+
+
+
+
+<script>
+  // Get elements
+  const menuButton = document.getElementById('menuButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Toggle dropdown when image is clicked
+  menuButton.addEventListener('click', function (event) {
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (event) {
+    if (!event.target.matches('#menuButton')) {
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  });
+</script>
+
+<!-- Inject/restore .middle links into dropdown on small screens -->
+<script>
+(function () {
+  const middle = document.querySelector('.middle');
+  const dropdown = document.getElementById('dropdownMenu');
+  if (!middle || !dropdown) return;
+  const linksContainer = middle.querySelector('.links');
+
+  function isMiddleHidden() {
+    return window.getComputedStyle(middle).display === 'none';
+  }
+
+  function createInjectedWrapper() {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'injected-links';
+    // basic styling so items look like dropdown items
+    wrapper.style.display = 'flex';
+    wrapper.style.flexDirection = 'column';
+    wrapper.style.padding = '6px 0';
+    wrapper.style.gap = '2px';
+    return wrapper;
+  }
+
+  function injectLinksIntoDropdown() {
+    if (dropdown.querySelector('.injected-links')) return; // already injected
+    const wrapper = createInjectedWrapper();
+    // clone each anchor so original stays in place
+    linksContainer.querySelectorAll('a').forEach(a => {
+      const cloned = a.cloneNode(true);
+      cloned.style.padding = '10px 16px';
+      cloned.style.color = '#132541';
+      cloned.style.textDecoration = 'none';
+      cloned.style.display = 'block';
+      // ensure clicking closes dropdown on navigation
+      cloned.addEventListener('click', () => dropdown.classList.remove('show'));
+      wrapper.appendChild(cloned);
+    });
+    // insert at top of dropdown
+    dropdown.insertBefore(wrapper, dropdown.firstChild);
+  }
+
+  function removeInjectedLinks() {
+    const injected = dropdown.querySelector('.injected-links');
+    if (injected) injected.remove();
+  }
+
+  function syncNav() {
+    if (isMiddleHidden()) injectLinksIntoDropdown();
+    else removeInjectedLinks();
+  }
+
+  // run on load and resize
+  window.addEventListener('resize', syncNav);
+  document.addEventListener('DOMContentLoaded', syncNav);
+  // also run once now (in case DOMContentLoaded already fired)
+  syncNav();
+})();
+</script>
+<script>
+  // Search functionality
+  function handleSearch(event) {
+    event.preventDefault();
+    const input = document.getElementById('searchInput');
+    const searchTerm = input.value.trim().toLowerCase();
+    
+    // Get all listing cards
+    const listings = document.querySelectorAll('.listing-card');
+    let found = false;
+  
+    // If search is empty, show all listings and remove no results message
+    if (!searchTerm) {
+      listings.forEach(listing => {
+        listing.style.display = 'flex';
+      });
+      const noResults = document.getElementById('noResults');
+      if (noResults) noResults.remove();
+      return false;
+    }
+  
+    listings.forEach(listing => {
+      const title = listing.querySelector('.listing-title').textContent.toLowerCase();
+      const location = listing.querySelector('.listing-location').textContent.toLowerCase();
+      const price = listing.querySelector('.price').textContent.toLowerCase();
+      const features = Array.from(listing.querySelectorAll('.features span'))
+        .map(span => span.textContent.toLowerCase())
+        .join(' ');
+  
+      const matches = title.includes(searchTerm) || 
+                     location.includes(searchTerm) || 
+                     price.includes(searchTerm) ||
+                     features.includes(searchTerm);
+  
+      listing.style.display = matches ? 'flex' : 'none';
+      if (matches) found = true;
+    });
+  
+    // Show/hide no results message
+    const noResults = document.getElementById('noResults');
+    if (!found) {
+      if (!noResults) {
+        const message = document.createElement('div');
+        message.id = 'noResults';
+        message.style.cssText = `
+          text-align: center;
+          padding: 20px;
+          color: #666;
+          width: 100%;
+          grid-column: 1 / -1;
+        `;
+        message.innerHTML = `
+          <h3>No results found for "${searchTerm}"</h3>
+          <p>Try different keywords or check spelling</p>
+        `;
+        document.querySelector('.video-grid').appendChild(message);
+      }
+    } else if (noResults) {
+      noResults.remove();
+    }
+  
+    return false;
+  }
+  
+  // Real-time search with debounce
+  const searchInput = document.getElementById('searchInput');
+  let searchTimeout;
+  
+  searchInput.addEventListener('input', function() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      handleSearch(new Event('submit'));
+    }, 300);
+  });
+  
+  // Handle search input clearing
+  searchInput.addEventListener('search', function() {
+    if (this.value === '') {
+      this.value = ''; // Ensure input is empty
+      handleSearch(new Event('submit')); // This will show all listings
+    }
+  });
+  
+  // Handle clear button click (for browsers that support it)
+  searchInput.addEventListener('click', function(e) {
+    const clearButton = e.target.closest('button[type="reset"]');
+    if (clearButton) {
+      this.value = '';
+      handleSearch(new Event('submit'));
+    }
+  });
+  </script>
+
+<script src="auth.js"></script> 
+<script src="session.js"></script>
+<script src="bookings.js"></script>
+
+
+
+
+
+ 
+</body>
+</html>

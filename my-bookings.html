@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="my-booking.css">
+  
+  
+  
+</head>
+<body>
+  <header class="header">
+    <div class="left">
+      <div class="logo">
+        <img src="homepage.png">
+        <div>Campus Conect</div>
+      </div>
+
+    </div>
+    <div class="middle">
+      <div class="links">
+        <div>
+          <a href="homepage.html">Home</a>
+        </div>
+        <div>
+          <a href="hostels.html">Hostels</a>
+        </div><div>
+          <a href="apartments.html">Apartments</a>
+        </div><div>
+          <a href="houses.html">Houses</a>
+        </div><div>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="right">
+      <div class="search-bar search3">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+    <div class="dropdown">
+      <img src="typeshit1.png" id="menuButton" alt="Menu" />
+      <div id="dropdownMenu" class="dropdown-content">
+        
+      </div>
+    </div>
+  </div>
+
+      
+
+    </div>
+
+</header>
+
+<main>
+  <div class="bookings-container">
+    <h1>My Bookings</h1>
+    <div id="bookingsList">
+      <!-- Bookings will be inserted here -->
+    </div>
+  </div>
+
+  <script>
+
+
+
+
+
+    // Display bookings
+    function displayBookings() {
+      const bookingsList = document.getElementById('bookingsList');
+      const bookings = JSON.parse(localStorage.getItem('userBookings') || '[]');
+      
+      if (bookings.length === 0) {
+        bookingsList.innerHTML = '<p>No bookings found.</p>';
+        return;
+      }
+
+      bookingsList.innerHTML = bookings.map(booking => `
+        <div class="booking-card">
+          <img src="${booking.listing.img}" alt="${booking.listing.title}" class="booking-image">
+          <div class="booking-details">
+            <h3 class="booking-title">${booking.listing.title}</h3>
+            <div class="booking-meta">
+              <p>Booked on: ${new Date(booking.date).toLocaleDateString()}</p>
+              <p>Location: ${booking.listing.location}</p>
+              <p>Payment Method: ${booking.paymentMethod}</p>
+              <p class="booking-price">${booking.listing.price}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Load bookings when page loads
+    displayBookings();
+  </script>
+
+</main>
+
+
+
+
+<script src="auth.js"></script> <script src="session.js"></script>
+
+<script>
+  // bookings storage helpers
+  const BOOKINGS_KEY = 'userBookings';
+  function getBookings() { return JSON.parse(localStorage.getItem(BOOKINGS_KEY) || '[]'); }
+  function saveBookings(list) { localStorage.setItem(BOOKINGS_KEY, JSON.stringify(list)); }
+  function addBooking(b) { const list = getBookings(); list.push(b); saveBookings(list); }
+  function removeBooking(id) { const list = getBookings().filter(b => b.id !== id); saveBookings(list); renderBookings(); }
+
+  // render bookings into DOM
+  function renderBookings() {
+    const container = document.getElementById('bookingsList');
+    const bookings = getBookings();
+    if (!bookings || bookings.length === 0) {
+      container.innerHTML = '<div class="empty-note">You have no bookings yet.</div>';
+      return;
+    }
+
+    container.innerHTML = bookings.map(b => {
+      const img = (b.listing && b.listing.img) ? b.listing.img : 'slide1.jpg';
+      const title = (b.listing && b.listing.title) ? b.listing.title : 'Listing';
+      const location = (b.listing && b.listing.location) ? b.listing.location : 'Unknown';
+      const price = (b.listing && b.listing.price) ? b.listing.price : '';
+      return `
+        <div class="booking-card" data-id="${b.id}">
+          <img src="${img}" class="booking-image" alt="${title}">
+          <div class="booking-details">
+            <h3 style="margin:0 0 6px">${title}</h3>
+            <div style="color:#666;font-size:14px">
+              <div>Booked on: ${new Date(b.date).toLocaleString()}</div>
+              <div>Location: ${location}</div>
+              <div>Payment: ${b.paymentMethod || 'N/A'}</div>
+              <div style="color:var(--brand);font-weight:700;margin-top:6px">${price}</div>
+            </div>
+            <div class="booking-actions">
+              
+              <button style="margin-top:15px;" class="btn btn-danger" onclick="deleteBookingHandler(${b.id})">Delete</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // delete handler with confirmation
+  function deleteBookingHandler(id) {
+    if (!confirm('Delete this booking? This action cannot be undone.')) return;
+    removeBooking(id);
+    alert('Booking deleted.');
+  }
+
+  // initialize page
+  document.addEventListener('DOMContentLoaded', function () {
+    // redirect to login if not authenticated
+    const current = (typeof getCurrentUser === 'function') ? getCurrentUser() : JSON.parse(localStorage.getItem('currentUser') || 'null');
+    if (!current) { window.location.href = 'login.html'; return; }
+    renderBookings();
+  });
+</script>
+
+<script>
+  // Get elements
+  const menuButton = document.getElementById('menuButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Toggle dropdown when image is clicked
+  menuButton.addEventListener('click', function (event) {
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (event) {
+    if (!event.target.matches('#menuButton')) {
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  });
+</script>
+
+<!-- Inject/restore .middle links into dropdown on small screens -->
+<script>
+(function () {
+  const middle = document.querySelector('.middle');
+  const dropdown = document.getElementById('dropdownMenu');
+  if (!middle || !dropdown) return;
+  const linksContainer = middle.querySelector('.links');
+
+  function isMiddleHidden() {
+    return window.getComputedStyle(middle).display === 'none';
+  }
+
+  function createInjectedWrapper() {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'injected-links';
+    // basic styling so items look like dropdown items
+    wrapper.style.display = 'flex';
+    wrapper.style.flexDirection = 'column';
+    wrapper.style.padding = '6px 0';
+    wrapper.style.gap = '2px';
+    return wrapper;
+  }
+
+  function injectLinksIntoDropdown() {
+    if (dropdown.querySelector('.injected-links')) return; // already injected
+    const wrapper = createInjectedWrapper();
+    // clone each anchor so original stays in place
+    linksContainer.querySelectorAll('a').forEach(a => {
+      const cloned = a.cloneNode(true);
+      cloned.style.padding = '10px 16px';
+      cloned.style.color = '#132541';
+      cloned.style.textDecoration = 'none';
+      cloned.style.display = 'block';
+      // ensure clicking closes dropdown on navigation
+      cloned.addEventListener('click', () => dropdown.classList.remove('show'));
+      wrapper.appendChild(cloned);
+    });
+    // insert at top of dropdown
+    dropdown.insertBefore(wrapper, dropdown.firstChild);
+  }
+
+  function removeInjectedLinks() {
+    const injected = dropdown.querySelector('.injected-links');
+    if (injected) injected.remove();
+  }
+
+  function syncNav() {
+    if (isMiddleHidden()) injectLinksIntoDropdown();
+    else removeInjectedLinks();
+  }
+
+  // run on load and resize
+  window.addEventListener('resize', syncNav);
+  document.addEventListener('DOMContentLoaded', syncNav);
+  // also run once now (in case DOMContentLoaded already fired)
+  syncNav();
+})();
+</script>
+
+
+
+  
+</body>
+</html>

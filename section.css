@@ -1,0 +1,133 @@
+.container {
+  
+  flex: 1;
+  
+  
+}
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  
+  
+}
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  aspect-ratio: 15 / 14;
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
+}
+.cards-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  width: 340px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn {
+  text-decoration: none;
+  color: #0066ff;
+  border: 2px solid #0066ff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0066ff;
+  color: white;
+}
+.cards-section1 {
+  
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  padding: 65px;
+  
+}
+.search3 {
+  border-radius: 25px;
+}
+.search3 input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 25px 0 0 25px;
+}
+.search3 button {
+  background: #4B70E2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius:  25px 25px ;
+  cursor: pointer;
+}

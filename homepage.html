@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="section.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="left">
+      <div class="logo">
+        <img src="homepage.png">
+        <div>Campus Conect</div>
+      </div>
+
+    </div>
+    <div class="middle">
+      <div class="links">
+        <div>
+          <a href="homepage.html">Home</a>
+        </div>
+        <div>
+          <a href="hostels.html">Hostels</a>
+        </div><div>
+          <a href="apartments.html">Apartments</a>
+        </div><div>
+          <a href="houses.html">Houses</a>
+        </div><div>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="right">
+      <!-- Replace the existing search div in the header -->
+<div class="search-wrapper">
+  <form id="searchForm" class="search3" role="search" onsubmit="return handleSearch(event)">
+    <input 
+      type="search" 
+      id="searchInput" 
+      placeholder="Search listings..." 
+      aria-label="Search listings"
+    >
+    <button type="submit" class="search-btn">
+      <img src="search.png" alt="Search" class="searchimg">
+    </button>
+  </form>
+</div>
+      <div class="dropdown">
+        <img src="typeshit1.png" id="menuButton" alt="Menu" />
+        <div id="dropdownMenu" class="dropdown-content">
+          
+        </div>
+      </div>
+     </div>
+
+      
+
+
+      </div>
+
+    </div>
+
+  </header>
+  
+
+
+  <main class="mainbody">
+    <div class="text">
+      <div class="ccname">Campus <br> Connect</div>
+      <br>
+      <div class="oneside">Your Gateway to Easy, Reliable Student & Youth Housing in Ghana.
+      </div>
+      <br><br>
+
+      <div class="last">
+        Connecting students and young professionals with verified, affordable  rental  housing through a trusted digital platform.
+      </div>
+      <br><br><br><br><br>
+      <a href="signup.html">
+        <button class="maown" >Join Us</button>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="531628003.jpg">
+          <img id="slide-2" src="guesthouse.jpg">
+          <img id="slide-3" src="danfa-site.jpg">
+        </div>
+        <div class="slider-nav">
+          <a href="slide-1"></a>
+          <a href="slide-2"></a>
+          <a href="slide-3"></a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </main>
+
+
+  <div class="cards-section1">
+    <section class="cards-container">
+  
+      <div class="card">
+        <img src="16onefamamstel-bedroom-6bed-bunkbed-scaled.webp" alt="Hostel Rentals">
+        <h2>Hostel Rentals</h2>
+        <p>Find affordable and comfortable hostels close to your campus or workplace. Compare prices, facilities, and availability in real time.</p>
+        <a href="hostels.html" class="btn">Browse Hostels</a>
+      </div>
+  
+      <div class="card">
+        <img src="2019.07.10_metro_California-housing_Blog-post_related.webp" alt="Apartment Rentals">
+        <h2>Apartment Rentals</h2>
+        <p>Looking for privacy and space? Explore modern apartments suited for individuals, friends, or families—available in prime locations.</p>
+        <a href="apartments.html" class="btn">Find Apartments</a>
+      </div>
+  
+      <div class="card">
+        <img src="0683e1698c67e4-executive-5bedroom-house-at-cantonment-for-rent-cantonments-greater-accra.jpg" alt="House Rentals">
+        <h2>House Rentals</h2>
+        <p>Discover well-maintained houses for rent with flexible payment options. Ideal for long-term stays or group living.</p>
+        <a href="houses.html" class="btn">View Houses</a>
+      </div>
+  
+    </section>
+  </div>
+  
+
+
+  
+  <footer style="background-color:#132541; color:white; padding:40px 20px; font-family:Arial, sans-serif;">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; max-width:1200px; margin:auto;">
+        
+        <!-- Brand -->
+        <div>
+            <h2 style="color:#E87A64;">Connect Campus</h2>
+            <p>Your trusted platform for renting hostels and homes with ease.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+            <h3 style="color:#E87A64;">Quick Links</h3>
+            <ul style="list-style:none; padding:0;">
+                <li><a href="homepage.html" style="color:white; text-decoration:none;">Home</a></li>
+                <li><a href="about.html" style="color:white; text-decoration:none;">About Us</a></li>
+                <li><a href="hostels.html" style="color:white; text-decoration:none;">Book</a></li>
+                <li><a href="hostels.html" style="color:white; text-decoration:none;">Hostels</a></li>
+                <li><a href="apartments.html" style="color:white; text-decoration:none;">Apartments</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="color:#E87A64;">Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +233 59 895 1474</p>
+            <p><i class="fas fa-envelope"></i> rolandomicah@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> East Legon, Ghana</p>
+        </div>
+
+        <!-- Follow -->
+        <div>
+            <h3 style="color:#E87A64;">Follow Us</h3>
+            <p>
+                <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-whatsapp"></i></a>
+            </p>
+            <h3 style="color:#E87A64;">Networks</h3>
+            <p>
+                <i class="fas fa-sim-card"></i> MTN <br>
+                <i class="fas fa-sim-card"></i> Vodafone <br>
+                <i class="fas fa-sim-card"></i> AirtelTigo
+            </p>
+        </div>
+    </div>
+
+    <hr style="border:1px solid #E87A64; margin:20px 0;">
+    <p style="text-align:center;">&copy; 2025 Connect Campus. All Rights Reserved.</p>
+</footer>
+
+  
+  
+  <script>
+    const slider = document.querySelector('.slider');
+    let scrollAmount = 0;
+  
+    function autoSlide() {
+      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0; // go back to first image
+      } else {
+        scrollAmount += slider.clientWidth; // move to next image
+      }
+      slider.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  
+    setInterval(autoSlide, 3000); // change image every 3 seconds
+
+
+    
+
+  </script>
+
+  <script>
+    // Get elements
+    const menuButton = document.getElementById('menuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+  
+    // Toggle dropdown when image is clicked
+    menuButton.addEventListener('click', function (event) {
+      dropdownMenu.classList.toggle('show');
+    });
+  
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('#menuButton')) {
+        if (dropdownMenu.classList.contains('show')) {
+          dropdownMenu.classList.remove('show');
+        }
+      }
+    });
+  </script>
+  
+  <!-- Inject/restore .middle links into dropdown on small screens -->
+  <script>
+  (function () {
+    const middle = document.querySelector('.middle');
+    const dropdown = document.getElementById('dropdownMenu');
+    if (!middle || !dropdown) return;
+    const linksContainer = middle.querySelector('.links');
+  
+    function isMiddleHidden() {
+      return window.getComputedStyle(middle).display === 'none';
+    }
+  
+    function createInjectedWrapper() {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'injected-links';
+      // basic styling so items look like dropdown items
+      wrapper.style.display = 'flex';
+      wrapper.style.flexDirection = 'column';
+      wrapper.style.padding = '6px 0';
+      wrapper.style.gap = '2px';
+      return wrapper;
+    }
+  
+    function injectLinksIntoDropdown() {
+      if (dropdown.querySelector('.injected-links')) return; // already injected
+      const wrapper = createInjectedWrapper();
+      // clone each anchor so original stays in place
+      linksContainer.querySelectorAll('a').forEach(a => {
+        const cloned = a.cloneNode(true);
+        cloned.style.padding = '10px 16px';
+        cloned.style.color = '#132541';
+        cloned.style.textDecoration = 'none';
+        cloned.style.display = 'block';
+        // ensure clicking closes dropdown on navigation
+        cloned.addEventListener('click', () => dropdown.classList.remove('show'));
+        wrapper.appendChild(cloned);
+      });
+      // insert at top of dropdown
+      dropdown.insertBefore(wrapper, dropdown.firstChild);
+    }
+  
+    function removeInjectedLinks() {
+      const injected = dropdown.querySelector('.injected-links');
+      if (injected) injected.remove();
+    }
+  
+    function syncNav() {
+      if (isMiddleHidden()) injectLinksIntoDropdown();
+      else removeInjectedLinks();
+    }
+  
+    // run on load and resize
+    window.addEventListener('resize', syncNav);
+    document.addEventListener('DOMContentLoaded', syncNav);
+    // also run once now (in case DOMContentLoaded already fired)
+    syncNav();
+  })();
+  </script>
+
+  <script>
+    // Check if user is logged in
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+        window.location.href = 'login.html'; // Redirect to login if not logged in
+    }
+</script>
+<script src="auth.js"></script> <script src="session.js"></script>
+<!-- ...existing code... -->
+  <script>
+    // Search on homepage (filters .card items; restores all when input cleared)
+    document.addEventListener('DOMContentLoaded', function () {
+      function handleHomeSearch(event) {
+        if (event) event.preventDefault();
+        const input = document.getElementById('homeSearchInput');
+        const term = (input.value || '').trim().toLowerCase();
+        const cards = document.querySelectorAll('.cards-container .card');
+        const container = document.querySelector('.cards-section1');
+
+        // restore initial state when search is empty
+        if (!term) {
+          cards.forEach(c => c.style.display = '');
+          const noResults = document.getElementById('homeNoResults');
+          if (noResults) noResults.remove();
+          return false;
+        }
+
+        let found = false;
+        cards.forEach(card => {
+          const title = (card.querySelector('h2')?.textContent || '').toLowerCase();
+          const desc = (card.querySelector('p')?.textContent || '').toLowerCase();
+          const matches = title.includes(term) || desc.includes(term);
+          card.style.display = matches ? '' : 'none';
+          if (matches) found = true;
+        });
+
+        let noResults = document.getElementById('homeNoResults');
+        if (!found) {
+          if (!noResults) {
+            noResults = document.createElement('div');
+            noResults.id = 'homeNoResults';
+            noResults.style.cssText = 'text-align:center;padding:18px;color:#fff;';
+            noResults.innerHTML = `<h3>No results found for "${term}"</h3>`;
+            container.insertBefore(noResults, container.firstChild);
+          } else {
+            noResults.innerHTML = `<h3>No results found for "${term}"</h3>`;
+          }
+        } else if (noResults) {
+          noResults.remove();
+        }
+
+        return false;
+      }
+
+      // wire up input debounce + native search clear handling
+      const input = document.getElementById('homeSearchInput');
+      let timer = null;
+      if (input) {
+        input.addEventListener('input', function () {
+          clearTimeout(timer);
+          timer = setTimeout(() => handleHomeSearch(new Event('submit')), 250);
+        });
+        input.addEventListener('search', function () {
+          if (this.value === '') handleHomeSearch(new Event('submit'));
+        });
+      }
+
+      // expose for form submit
+      window.handleHomeSearch = handleHomeSearch;
+    });
+  </script>
+<!-- ...existing code... -->
+
+  
+</body>
+</html>

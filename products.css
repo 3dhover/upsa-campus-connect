@@ -1,0 +1,598 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #E87A64;
+}
+header{
+  height: 85px;
+  background-color: #132541;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  
+}
+section {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  
+}
+.logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 15px;
+  
+}
+.logo div {
+  margin-top: 0;
+  color: #F7F4F4;
+  pointer-events: none;
+}
+.middle {
+  flex: 1;
+  padding-left: 20px;
+  
+  
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+
+
+}
+.links a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.links a:hover{
+  color: #E87A64;
+}
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px
+}
+
+
+.right input::placeholder {
+  font-size: 19px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 200px;
+}
+
+/* The image that triggers the dropdown */
+.dropdown img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.dropdown img:hover {
+  transform: scale(1.1);
+}
+
+/* The dropdown menu itself */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+.search3 {
+  border-radius: 25px;
+  background-color: white;
+  padding: 5px 10px;
+
+}
+.search3 input {
+  min-width: 20px;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 25px 0 0 25px;
+}
+.search3 button {
+  background: #4B70E2;
+  color: white;
+  border: none;
+  border-radius:  25px 25px ;
+  cursor: pointer;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown */
+.show {
+  display: block;
+}
+
+.footer {
+  background-color: #132541;
+  color: #fff;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+}
+
+.footer h2, .footer h3 {
+  margin-bottom: 15px;
+  color: #f9c74f;
+}
+
+.footer p, .footer a {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f9c74f;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 8px 0;
+}
+
+.footer .newsletter input {
+  padding: 8px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.footer .newsletter button {
+  padding: 8px 12px;
+  background-color: #f9c74f;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #334455;
+  padding-top: 15px;
+  font-size: 14px;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 85px;
+  background-color: #132541;
+  width: 77px;
+  z-index: 200;
+  padding-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.sidebar a {
+  text-decoration: none;
+}
+.sidebar-link {
+  
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+
+}
+.sidebar-link:hover {
+  background-color: #1c283c;
+}
+.sidebar-link img {
+  height: 30px;
+  width: 30px;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 4px;
+
+}
+.sidebar-link div {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  color: #F7F4F4;
+}
+
+                    
+                       
+                    
+                    
+/* Compact listings (overrides the old video-grid look) */
+.video-grid.listings-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  padding-left: 96px; /* keep sidebar space */
+  padding-top: 105px; /* keep header space */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(11,22,40,0.06);
+  transition: transform .14s ease, box-shadow .14s ease;
+  height: auto;
+  min-height: 180px;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(11,22,40,0.09);
+}
+
+.listing-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #f5f7fa;
+  overflow: hidden;
+}
+.listing-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
+/* Small badge */
+.badge {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background: rgba(19,37,65,0.9);
+  color: #fff;
+  padding: 4px 6px;
+  font-size: 11px;
+  border-radius: 6px;
+}
+.badge.available { background: #27ae60; }
+
+/* Info area */
+.listing-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 auto;
+}
+.listing-title {
+  margin: 0;
+  font-size: 14px;
+  color: #132541;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listing-location {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* meta row: price + rating/distance */
+.listing-meta {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.price {
+  color: #E87A64;
+  font-weight:700;
+  font-size:13px;
+}
+.meta-right {
+  background:#f5f6f8;
+  padding: 4px 6px;
+  border-radius:6px;
+  font-size:12px;
+  color:#374151;
+}
+
+/* features small pills */
+.features {
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.features span {
+  background:#f3f4f6;
+  color:#374151;
+  padding:4px 6px;
+  border-radius:6px;
+  font-size:11px;
+}
+
+/* actions small */
+.actions {
+  margin-top:auto;
+  display:flex;
+  gap:6px;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius:6px;
+  font-size:12px;
+  padding:6px 8px;
+}
+.btn-small { padding:6px 8px; font-size:12px; }
+.btn-outline { background:transparent; color:#132541; border:1px solid #e5e7eb; }
+.btn-primary { background:#E87A64; color:#fff; font-weight:600; }
+
+/* Responsive tweaks */
+@media (max-width: 880px) {
+  .video-grid.listings-compact {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .listing-title { font-size:13px; }
+  .price { font-size:12px; }
+}
+@media (min-width: 1200px) {
+  .video-grid.listings-compact { gap: 14px; }
+}
+@media (max-width: 900px) {
+  header {
+    height: 70px;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 8px;
+  }
+  
+
+  .sidebar {
+    display: none;
+  }
+
+  .left { width: auto; }
+  .logo img { height: 44px; width: 44px; margin-left: 8px; }
+  .logo div { display: none; } /* hide large text in logo */
+
+  /* hide full nav links on smaller screens */
+  .middle { display: none; }
+
+  .left {
+    width: 10px;
+  }
+  .search3 {
+    margin-right: 55px;
+  }
+
+  /* hide large search input, keep icons */
+  .right input { min-width: 0; }
+  .searchimg { width: 36px; height: 36px; }
+
+  /* dropdown remains visible; nudge it left */
+  .dropdown { margin-left: 8px; }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  header { height: 64px; padding: 6px 10px; }
+  .logo img { height: 45px; width: 45px; margin-left: 50px;}
+  .searchimg { width: 32px; height: 32px; }
+  .dropdown { margin-left: 200px; }
+}
+
+
+/* Footer responsiveness */
+@media (max-width: 880px) {
+  .footer-container { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .footer-section { width: 100%; }
+}
+  /* Adjust listing grid padding when sidebar is hidden */
+  .video-grid.listings-compact {
+    
+    padding-right: 16px;
+    padding-top: 120px; /* allow for possibly taller stacked header */
+   
+  }
+
+/* end responsive additions */
+/* Add these rules to your existing CSS */
+.dropdown-content .sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content .sidebar-item img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-content .sidebar-item span {
+  font-size: 14px;
+}
+
+.dropdown-content .dropdown-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 8px 0;
+}
+
+.dropdown-content .sidebar-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Ensure dropdown has enough space for added items */
+@media (max-width: 900px) {
+  .dropdown-content {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  header {
+    font-size: 10px;
+  }
+  .video-grid.listings-compact {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 120px; /* allow for possibly taller stacked header */
+   
+  }
+  
+}
+@media (max-width: 1376px){
+  .middle {
+    padding-right: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .search3 {
+    display: none;
+  }
+
+}
+/* Add/update these styles in houses.css */
+.search-wrapper {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 10px;
+}
+
+.search3 {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px;
+  width: 100%;
+}
+
+.search3 input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  width: 100%;
+  min-width: 120px;
+  background: transparent;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+.searchimg {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .search-wrapper {
+    max-width: 200px;
+  }
+  
+  .search3 input {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-wrapper {
+    display: none;
+  }
+}
+
+           

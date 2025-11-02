@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Campus Connect</title>
+    <link rel="stylesheet" href="houses.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .about-container {
+            padding: 120px 96px 40px 96px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #132541;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #132541;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #132541;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            color: #E87A64;
+        }
+
+        .team-section {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #132541;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: #132541;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E87A64;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #fff;
+        }
+
+        .mission-section {
+            background: #132541;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .mission-section h2 {
+            color: #E87A64;
+            margin-bottom: 20px;
+        }
+
+        .mission-section p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .about-container {
+                padding: 100px 20px 40px 20px;
+            }
+            
+            .hero-section h1 {
+                font-size: 32px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+        }
+        .search3 {
+  border-radius: 25px;
+  background-color: white;
+  padding: 5px 10px;
+
+}
+.search3 input {
+  min-width: 50px;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 25px 0 0 25px;
+}
+.search3 button {
+  background: #4B70E2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius:  25px 25px ;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <div class="logo">
+                <img src="homepage.png">
+                <div>Campus Connect</div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="links">
+                <div><a href="homepage.html">Home</a></div>
+                <div><a href="hostels.html">Hostels</a></div>
+                <div><a href="apartments.html">Apartments</a></div>
+                <div><a href="houses.html">Houses</a></div>
+                <div><a href="about.html">About</a></div>
+            </div>
+        </div>
+        <div class="right">
+            <!-- Replace the existing search div in the header -->
+<div class="search-wrapper">
+  <form id="searchForm" class="search3" role="search" onsubmit="return handleSearch(event)">
+    <input 
+      type="search" 
+      id="searchInput" 
+      placeholder="Search listings..." 
+      aria-label="Search listings"
+    >
+    <button type="submit" class="search-btn">
+      <img src="search.png" alt="Search" class="searchimg">
+    </button>
+  </form>
+</div>
+            <div class="dropdown">
+              <img src="typeshit1.png" id="menuButton" alt="Menu" />
+              <div id="dropdownMenu" class="dropdown-content">
+                
+            </div>
+            </div>
+            </div>
+      
+            
+      
+      
+            </div>
+      
+        </div>
+    </header>
+
+    
+
+    <main class="about-container">
+        <section class="hero-section">
+            <h1>About Campus Connect</h1>
+            <p>Your trusted partner in finding the perfect student accommodation near UPSA. We're dedicated to making the housing search process simple, transparent, and reliable for students and young professionals.</p>
+        </section>
+
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <p>At Campus Connect, we believe every student deserves access to quality, affordable housing that supports their academic journey. Our mission is to bridge the gap between property owners and students, creating a seamless rental experience through innovative technology and exceptional service.</p>
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Happy Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Listed Properties</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support Available</div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="material-icons">verified_user</i>
+                <h3>Verified Listings</h3>
+                <p>Every property is personally verified to ensure quality and accuracy</p>
+            </div>
+            <div class="feature-card">
+                <i class="material-icons">security</i>
+                <h3>Secure Booking</h3>
+                <p>Safe and secure booking process with multiple payment options</p>
+            </div>
+            <div class="feature-card">
+                <i class='fas fa-hands-helping'></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock assistance for all your housing needs</p>
+            </div>
+            <div class="feature-card">
+                <i class="material-icons">edit_location</i>
+                <h3>Prime Locations</h3>
+                <p>Properties carefully selected for convenience and accessibility</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Why Choose Campus Connect?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Student-Focused</h3>
+                    <p>Tailored specifically for UPSA students' needs and budget</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden fees or unexpected charges</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy Booking</h3>
+                    <p>Simple and straightforward booking process</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Local Expertise</h3>
+                    <p>Deep knowledge of UPSA area and student requirements</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color:#132541; color:white; padding:40px 20px; font-family:Arial, sans-serif; 
+    ">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; max-width:1200px; margin:auto;">
+            <div>
+                <h2 style="color:#E87A64;">Connect Campus</h2>
+                <p>Your trusted platform for renting hostels and homes with ease.</p>
+            </div>
+            <div>
+                <h3 style="color:#E87A64;">Quick Links</h3>
+                <ul style="list-style:none; padding:0;">
+                    <li><a href="homepage.html" style="color:white; text-decoration:none;">Home</a></li>
+                    <li><a href="about.html" style="color:white; text-decoration:none;">About Us</a></li>
+                    <li><a href="hostels.html" style="color:white; text-decoration:none;">Hostels</a></li>
+                    <li><a href="apartments.html" style="color:white; text-decoration:none;">Apartments</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color:#E87A64;">Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +233 59 895 1474</p>
+                <p><i class="fas fa-envelope"></i> rolandomicah@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> East Legon, Ghana</p>
+            </div>
+            <div>
+                <h3 style="color:#E87A64;">Follow Us</h3>
+                <p>
+                    <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-whatsapp"></i></a>
+                </p>
+            </div>
+        </div>
+        <hr style="border:1px solid #E87A64; margin:20px 0;">
+        <p style="text-align:center;">&copy; 2025 Connect Campus. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Sidebar management code
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuButton.addEventListener('click', function(event) {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('#menuButton')) {
+                if (dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            }
+        });
+
+        
+    </script>
+    <script>
+        (function () {
+          const middle = document.querySelector('.middle');
+          const dropdown = document.getElementById('dropdownMenu');
+          if (!middle || !dropdown) return;
+          const linksContainer = middle.querySelector('.links');
+        
+          function isMiddleHidden() {
+            return window.getComputedStyle(middle).display === 'none';
+          }
+        
+          function createInjectedWrapper() {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'injected-links';
+            // basic styling so items look like dropdown items
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+            wrapper.style.padding = '6px 0';
+            wrapper.style.gap = '2px';
+            return wrapper;
+          }
+        
+          function injectLinksIntoDropdown() {
+            if (dropdown.querySelector('.injected-links')) return; // already injected
+            const wrapper = createInjectedWrapper();
+            // clone each anchor so original stays in place
+            linksContainer.querySelectorAll('a').forEach(a => {
+              const cloned = a.cloneNode(true);
+              cloned.style.padding = '10px 16px';
+              cloned.style.color = '#132541';
+              cloned.style.textDecoration = 'none';
+              cloned.style.display = 'block';
+              // ensure clicking closes dropdown on navigation
+              cloned.addEventListener('click', () => dropdown.classList.remove('show'));
+              wrapper.appendChild(cloned);
+            });
+            // insert at top of dropdown
+            dropdown.insertBefore(wrapper, dropdown.firstChild);
+          }
+        
+          function removeInjectedLinks() {
+            const injected = dropdown.querySelector('.injected-links');
+            if (injected) injected.remove();
+          }
+        
+          function syncNav() {
+            if (isMiddleHidden()) injectLinksIntoDropdown();
+            else removeInjectedLinks();
+          }
+        
+          // run on load and resize
+          window.addEventListener('resize', syncNav);
+          document.addEventListener('DOMContentLoaded', syncNav);
+          // also run once now (in case DOMContentLoaded already fired)
+          syncNav();
+        })();
+        </script>
+    <script src="auth.js"></script> <script src="session.js"></script>
+</body>
+</html>

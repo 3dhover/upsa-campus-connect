@@ -1,0 +1,116 @@
+
+
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.search3 {
+  border-radius: 25px;
+}
+.search3 input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 25px 0 0 25px;
+}
+.search3 button {
+  background: #4B70E2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius:  25px 25px ;
+  cursor: pointer;
+}
+
+.payment-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.payment-form .form-group {
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.payment-form select,
+.payment-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.payment-form button {
+  background: #E87A64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.payment-form button:last-child {
+  background: #ccc;
+}
+
+/* Bookings page styles */
+.bookings-container {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+}
+
+.booking-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.booking-details {
+  flex: 1;
+}
+
+.booking-title {
+  margin: 0 0 10px;
+  color: #132541;
+}
+
+.booking-meta {
+  color: #666;
+  font-size: 14px;
+}
+
+.booking-price {
+  color: #E87A64;
+  font-weight: bold;
+}
