@@ -223,9 +223,7 @@ main {
       .search3 {
         display: none;
       }
-      .dropdown {
-        padding-left: 200px;
-      }
+      
 
 }
 @media (max-width: 5000px) {
@@ -312,4 +310,5 @@ main {
   }
 
 }
+
 
