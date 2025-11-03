@@ -301,8 +301,11 @@ main {
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  .search3 button {
+  .search3 {
     display: none;
+  }
+  .logo img {
+    margin-left: 10px;
   }
   .dropdown {
     padding-left: 200px;
